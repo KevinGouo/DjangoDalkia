@@ -6,8 +6,4 @@ from django.http import HttpResponse
 # For HTTP requests
 
 def index(response):
-    return HttpResponse("<h1> Test Django Database")
-
-
-def v1(response):
-    return HttpResponse("<h1>View 1")
+    return HttpResponse("<h1>%s" % id)

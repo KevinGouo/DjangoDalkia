@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+{% block title %}
+CLogin Here
+{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<form method="POST" class="form-group">
+    {% csrf_token %}
+    {{form|crispy}}
+    <p>New to the company? Configure your data portal <a href="/register">here</a></p>
+    <button type="submit" class="btn btn-warning">Login</button>
+</form>
+{% endblock %}
